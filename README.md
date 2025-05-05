@@ -22,12 +22,6 @@ In preprocessing the data, many methods were applied. An unneceessary index colu
 
 ### Visualization
 
-![Diamonds_pairplot.png](README_files/8b7f2611-b85f-41ac-ab72-802a3b7b0793.png)
-
-#### Pairplot
-
-The pairplot of the given data.
-
 ![Diamonds_corrmatrix.png](README_files/f23236c5-a738-42ab-a7de-776991d4e316.png)
 
 #### Correlation Matrix of Numerical Features.
@@ -71,3 +65,42 @@ Although the Random Forest model performed the best on the initial run, a deeper
 ## Future Work
 
 In the future, I'd like to explore better feature selection and preproccessing techniques, as well as further investigating in the observed "gap" in the data, which also could have been causing the aforementioned "dip" in the cross-validation. I'd like to explore how different models react with the data; for example since tree-based models seemed ill-fit, perhaps higher orders of polynomials or ridge/lasso regressors would perform better, and perhaps salvaging tree-based models with hyperparamater tuning could also be explored.
+
+## How to Reproduce Results
+
+To reproduce the analysis and modeling results:
+
+- Clone this repository.
+- Open Diamond_Pricing.ipynb using Jupyter Notebook or Jupyter Lab.
+- Download datasets in the same directory as the notebook.
+- Run all cells.
+- Repeat with Diamond_ModelDeepDive.ipynb
+
+All necessary data loading, preprocessing, and model evaluation steps are included in the notebooks. 
+
+
+## Contents of Repository
+
+- diamonds.csv: Raw dataset downloaded from Kaggle.
+- diamonds_processed.csv: Preprocessed version used in modeling.
+- Diamond_Pricing.ipynb: contains data exploration, visualizations, and preprocessing, as well as the initial round of modelling, including performance comparisons.
+- Diamond_ModelDeepDive.ipynb: contains second round of modelling, performance comparisons, and fine-tuning.
+
+## Software Setup
+
+Packages used:
+- pandas
+- numpy
+- matplotlib.pyplot
+- seaborn
+- sklearn
+- scipy
+
+## Data
+The dataset used can be downloaded from the [Kaggle page](https://www.kaggle.com/datasets/shivam2503/diamonds/data) or directly from this repository:
+
+- diamonds.csv: Raw dataset downloaded from Kaggle.
+- diamonds_processed.csv: Preprocessed version used in modeling.
+
+The process for generating the clean dataset was documented in the Diamond_Pricing.ipynb notebook.
+
