@@ -1,6 +1,6 @@
 # Diamond Pricing
 
-This repository holds an attempt to apply machine learning methods to model and predict the price of diamonds using data from the ["Diamonds"](https://www.kaggle.com/datasets/shivam2503/diamonds/data) Kaggle datset.
+This repository holds an attempt to apply machine learning methods to model and predict the price of diamonds using data from the ["Diamonds"](https://www.kaggle.com/datasets/shivam2503/diamonds/data) Kaggle dataset.
 
 ## Overview
 
@@ -18,7 +18,7 @@ Instances (Train, Test, Validation Split): an 80/20 train-test split was done fo
 
 ## Preprocessing / Clean up
 
-In preprocessing the data, many methods were applied. An unneceessary index column was removed; no imputatation was necessary because there were no null or missing values. The categorical features were label encoded, since many provided information on quality or sequences, rather than one-hot encoded. Extreme outliers and nonsense entries were trimmed. Some numerical columns were binned and encoded, and the remaining numerical columns were normalized. More details of this process can be seen in the "Diamond_Pricing" notebook.
+In preprocessing the data, many methods were applied. An unnecessary index column was removed; no imputatation was necessary because there were no null or missing values. The categorical features were label encoded, since many provided information on quality or sequences, rather than one-hot encoded. Extreme outliers and nonsense entries were trimmed. Some numerical columns were binned and encoded, and the remaining numerical columns were normalized. More details of this process can be seen in the "Diamond_Pricing" notebook.
 
 ### Visualization
 
@@ -36,11 +36,11 @@ An initial baseline model was run on the raw data, before any significant prepro
 
 ## Problem Formulation
 
-The inputs were the various characteristics and given attributes of the diamonds, such as their cut, clarity, dimensions, etc., and the target variable, or output, was the price of the diamonds. This was a regression task. In the first round of modelling, linear regression, decision tree, and random forest were all utilized. Different iteractions of each were done with different subsections of the cleaned dataset. During the second round ("Diamonds_ModelDeepDive"), polynomial regression was also added, since the tree models seemed to be inconsistent and overfitting, while the linear regression seemed to be too simple. Polynomial regression proved to be a good balance. 
+The inputs were the various characteristics and given attributes of the diamonds, such as their cut, clarity, dimensions, etc., and the target variable, or output, was the price of the diamonds. This was a regression task. In the first round of modelling, linear regression, decision tree, and random forest were all utilized. Different iterations of each were done with different subsections of the cleaned dataset. During the second round ("Diamonds_ModelDeepDive"), polynomial regression was also added, since the tree models seemed to be inconsistent and overfitting, while the linear regression seemed to be too simple. Polynomial regression proved to be a good balance. 
 
 ## Performance Comparison
 
-The key performance metrics were the R² and RMSE. Residual plots and performance plots (during the second round) were also used and compared to evaluate model performance. Initially, random forest performed best, with an R² value of 0.992, and the lowest RMSE value, however this was likely overfit. This issue was attempted to be rectified within the second round, where cross-validation was utilized to get an averade R² across folds. The tree-based models proved to be inconsistent across different train-test cuts, whereas the linear regression performed more consistently. Interestingly, every model's R² score seemed to "dip" at a certain section of the cross-validation. This led to the decision to use a polynomial regressor to improve on the basic linear regression and also avoid the pitfalls of the tree-based models. 
+The key performance metrics were the R² and RMSE. Residual plots and performance plots (during the second round) were also used and compared to evaluate model performance. Initially, random forest performed best, with an R² value of 0.992, and the lowest RMSE value, however this was likely overfit. This issue was attempted to be rectified within the second round, where cross-validation was utilized to get an average R² across folds. The tree-based models proved to be inconsistent across different train-test cuts, whereas the linear regression performed more consistently. Interestingly, every model's R² score seemed to "dip" at a certain section of the cross-validation. This led to the decision to use a polynomial regressor to improve on the basic linear regression and also avoid the pitfalls of the tree-based models. 
 
 ![Screenshot 2025-05-02 at 9.55.56 AM.png](README_files/5a5f70fd-53bb-49e1-bef4-12a957944976.png)
 
@@ -56,7 +56,7 @@ The key performance metrics were the R² and RMSE. Residual plots and performanc
 
 ![Diamonds_RMSEcomparison.png](README_files/61362afc-4f92-4e0b-8247-b3cf7b8f4cc1.png)
 
-#### Comparison of RMSE values accross most models.
+#### Comparison of RMSE values across most models.
 
 ## Conclusions
 
@@ -64,7 +64,7 @@ Although the Random Forest model performed the best on the initial run, a deeper
 
 ## Future Work
 
-In the future, I'd like to explore better feature selection and preproccessing techniques, as well as further investigating in the observed "gap" in the data, which also could have been causing the aforementioned "dip" in the cross-validation. I'd like to explore how different models react with the data; for example since tree-based models seemed ill-fit, perhaps higher orders of polynomials or ridge/lasso regressors would perform better, and perhaps salvaging tree-based models with hyperparamater tuning could also be explored.
+In the future, I'd like to explore better feature selection and preprocessing techniques, as well as further investigating in the observed "gap" in the data, which also could have been causing the aforementioned "dip" in the cross-validation. I'd like to explore how different models react with the data; for example since tree-based models seemed ill-fit, perhaps higher orders of polynomials or ridge/lasso regressors would perform better, and perhaps salvaging tree-based models with hyperparamater tuning could also be explored.
 
 ## How to Reproduce Results
 
