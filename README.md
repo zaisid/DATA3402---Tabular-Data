@@ -9,11 +9,9 @@ The purpose of this project was to use the data provided from the Kaggle dataset
 
 ## Data
 
-Type: Tabular data, both categorical and numerical, describing the characteristics of diamonds, along with their prices.
-
-Size: 53,940 entries and 10 features
-
-Instances (Train, Test, Validation Split): an 80/20 train-test split was done for the first round of models, and then a 75/25 split was done in the second round. 5-fold cross validation was applied during the latter.
+* Type: Tabular data, both categorical and numerical, describing the characteristics of diamonds, along with their prices.
+* Size: 53,940 entries and 10 features
+* Instances (Train, Test, Validation Split): an 80/20 train-test split was done for the first round of models, and then a 75/25 split was done in the second round. 5-fold cross validation was applied during the latter.
 
 
 
